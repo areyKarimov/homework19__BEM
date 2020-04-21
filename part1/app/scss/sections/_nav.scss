@@ -1,0 +1,25 @@
+.nav {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 10%;
+        align-items: flex-start;
+        padding: 20px;
+        z-index: 20;
+        opacity: 1;
+        transition: opacity 0.3s ease-in;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

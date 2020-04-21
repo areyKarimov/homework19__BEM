@@ -1,0 +1,37 @@
+.form {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr) 5fr;
+    grid-row-gap: 15px;
+    &__item {
+        color: $light_text;
+        position: relative;
+        outline: none;
+        padding: 21px;
+        background: $form_color;
+        opacity: 0.5;
+        border: none;
+        transition: all 0.3s ease-in;
+        border-left: 4px solid transparent;
+        &::placeholder {
+            color: $light_text;
+        }
+        &:focus {
+            opacity: 1;
+            border-left: 4px solid #355b82;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form {
+        grid-template-rows: repeat(3, 1fr) 150px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .form {
+        &__item {
+            padding: 10px;
+        }
+    }
+}

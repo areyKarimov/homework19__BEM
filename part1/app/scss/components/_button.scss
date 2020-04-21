@@ -1,0 +1,39 @@
+.button {
+    padding: 15px 25px;
+    font-size: 20px;
+    -webkit-box-shadow: -1px 3px 5px 1px rgba(138, 138, 138, 1);
+    -moz-box-shadow: -1px 3px 5px 1px rgba(138, 138, 138, 1);
+    box-shadow: -1px 3px 5px 1px rgba(138, 138, 138, 1);
+    color: $light_text;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.3s ease-in;
+    &:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    &-header {
+        background: $btn_header;
+    }
+    &-gallery {
+        background: $btn_gallery;
+    }
+    &-subscribe {
+        background: $btn_subscribe;
+    }
+    &-blog {
+        background: $btn_blog;
+    }
+    &-contact {
+        background: $btn_send;
+        -webkit-box-shadow: -1px 3px 5px 1px rgb(116, 116, 116);
+        -moz-box-shadow: -1px 3px 5px 1px rgb(116, 116, 116);
+        box-shadow: -1px 3px 5px 1px rgb(116, 116, 116);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .button {
+        font-size: 14px;
+    }
+}

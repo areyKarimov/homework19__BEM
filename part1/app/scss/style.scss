@@ -1,0 +1,30 @@
+@import url(../css/normalize.css),
+url(../css/bootstrap-grid.css),
+url(../css/stylesheet.css),
+url(../css/iconmoon.css),
+'variables',
+'components',
+'sections';
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #f9f8fb;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 90px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 17px;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 360px) {
+    h2 {
+        font-size: 54px;
+        margin-bottom: 10px;
+    }
+}

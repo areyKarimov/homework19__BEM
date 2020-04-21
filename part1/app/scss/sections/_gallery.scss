@@ -1,0 +1,114 @@
+.gallery {
+    padding: 80px 0 90px;
+    background: $gallery_bg;
+    &__header {
+        grid-column: 4/10;
+        text-align: center;
+        margin-bottom: 35px;
+        color: $dark_text;
+    }
+    &__collage {
+        grid-column: 1/13;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, 260px) 400px;
+        margin-bottom: 45px;
+    }
+    &__img {
+        -webkit-box-shadow: -1px 3px 5px 1px rgb(88, 88, 88);
+        -moz-box-shadow: -1px 3px 5px 1px rgb(88, 88, 88);
+        box-shadow: -1px 3px 5px 1px rgb(88, 88, 88);
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+        &:nth-child(1) {
+            grid-column: 1/9;
+            grid-row: 1/3;
+        }
+        &:nth-child(2) {
+            grid-column: 9/13;
+            grid-row: 1/2;
+        }
+        &:nth-child(3) {
+            grid-column: 9/13;
+            grid-row: 2/3;
+        }
+        &:nth-child(4) {
+            grid-column: 1/7;
+            grid-row: 3/4;
+        }
+        &:nth-child(5) {
+            grid-column: 7/13;
+            grid-row: 3/4;
+        }
+    }
+}
+
+.button-gallery {
+    grid-column: 6/8;
+}
+
+@media screen and (max-width: 768px) {
+    .button-gallery {
+        padding: 15px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        padding: 80px 0 50px;
+        &__collage {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 160px) 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        padding: 40px 0 25px;
+        &__header {
+            grid-column: 2/12;
+            text-align: center;
+            margin-bottom: 35px;
+            color: $dark_text;
+        }
+        &__collage {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 100px) 220px;
+        }
+    }
+    .button-gallery {
+        grid-column: 5/9;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        padding: 40px 0 25px;
+        &__header {
+            grid-column: 2/12;
+            text-align: center;
+            margin-bottom: 35px;
+            color: $dark_text;
+        }
+        &__collage {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 90px) 140px;
+            grid-gap: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .gallery {
+        padding: 40px 0 25px;
+        &__collage {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 70px) 110px;
+            grid-gap: 10px;
+        }
+    }
+}
